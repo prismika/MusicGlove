@@ -1,4 +1,4 @@
-//SWITCH BOARD TO FLORA TEENY IN TOOLS
+//SWITCH BOARD TO FLORA TEENSY IN TOOLS
 //SWITCH TYPE TO MIDI IN TOOLS
 
 #include <MPU6050.h>
@@ -119,9 +119,10 @@ void loop() {
     //smoothedRot = min(255, smoothedRot);
 
     if (smoothedRot != prevMessage[axis]) {
-      if(analogRead(FLEXPIN) < FLEX_THRESHOLD){
+      //----------TODO FIX THE FLEX-------------
+      //if(analogRead(FLEXPIN) < FLEX_THRESHOLD){
         MIDImessage("param", axis, smoothedRot);
-      }
+      //}
       //colorPixelByAxis(axis, smoothedRot / 8);
       colorPixel(0, 0, smoothedRot / 5, 0);
       prevMessage[axis] = smoothedRot;

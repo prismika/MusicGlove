@@ -34,7 +34,6 @@ void MIDImessage(String command, byte data1, byte data2) {
   Serial.write(data2);
 }
 
-
 //New MIDImessage that sends from Flora/teeny directly once set up as a midi device
 //https://learn.adafruit.com/midi-drum-glove/code#adding-midi-support-to-flora
 void MIDImessage(String command, byte data1, byte data2) {

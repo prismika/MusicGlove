@@ -1,7 +1,7 @@
 // USB MIDI receive example, Note on/off -> LED on/off
 // contributed by Alessandro Fasan
 
-int ledPin = 7;
+int ledPin = 13;
 
 void OnNoteOn(byte channel, byte note, byte velocity)
 {

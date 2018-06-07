@@ -59,7 +59,11 @@ void loop(){
 //  for(int i = 0; i < abs(smoothedRot); i++){
 //    Serial.print("|");
 //  }
-  Serial.println(smoothedRot);
+  Serial.print("|");
+  for(int i = 0; i < abs(smoothedRot); i++){
+    Serial.print("|");
+  }
+  Serial.println();
   delay(1000/MESSAGES_PER_SECOND);
 }
 
