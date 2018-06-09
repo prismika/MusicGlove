@@ -3,6 +3,8 @@
 
 //TODO Add ifdef things to this
 
+//Logs
+
 //TODO Facade for boards
 //TODO 	Led pins
 //TODO	Pixel
@@ -18,9 +20,14 @@ class Glove{
 		void read();
 		int getSmoothRotation();
 		int getRotation();
+		void debugMode(int level);
 	private:
 		MPU6050 gyro;
 		int gloveVersion;
+		
+		void lg(char msg[]);
+		int debugLevel;
+		
 		int ledPin;
 		int readBuffer[15];
 		int bufferSize;
